@@ -1,2 +1,2 @@
 # FastCrud
-Simple class that manage CRUD operations
+Simple class libraries that manage CRUD operations
