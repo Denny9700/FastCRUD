@@ -41,7 +41,7 @@ public class FastCrud implements IDatabase {
 	 * This method allows you to insert a generic item into the database
 	 */
 	@Override
-	public <T> int Create(T object) throws Exception {
+	public <T> int create(T object) throws Exception {
 		Connection connection = null;
 		PreparedStatement statement = null;
 		
@@ -70,7 +70,7 @@ public class FastCrud implements IDatabase {
 	 * This method allows you to update a generic item into the database
 	 */
 	@Override
-	public <T> void Update(T object) throws Exception {
+	public <T> void update(T object) throws Exception {
 		Connection connection = null;
 		PreparedStatement statement = null;
 		
@@ -96,7 +96,7 @@ public class FastCrud implements IDatabase {
 	 * This method allows you to delete a generic item into the database
 	 */
 	@Override
-	public <T> void Delete(T object) throws Exception {
+	public <T> void delete(T object) throws Exception {
 		Connection connection = null;
 		PreparedStatement statement = null;
 		
@@ -119,7 +119,7 @@ public class FastCrud implements IDatabase {
 	 * This method allows you to find a generic item from the database
 	 */
 	@Override
-	public <T> LinkedHashSet<T> Read(String query, Class<T> clazz) throws Exception {
+	public <T> LinkedHashSet<T> read(String query, Class<T> clazz) throws Exception {
 		BeanEntity<T> entity = (BeanEntity<T>) this.beanEntityFactory.create(clazz);
 		
 		Connection connection = null;
