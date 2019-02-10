@@ -13,8 +13,8 @@ import it.dsoft.fastcrud.exceptions.TableNameException;
  *
  */
 public interface IDatabase {
-	public <T> int Create(T object) throws SQLException, ConfigurationException, ObjectMapException, TableNameException, Exception;
-	public <T> void Update(T object) throws SQLException, ConfigurationException, ObjectMapException, TableNameException, Exception;
-	public <T> void Delete(T object) throws SQLException, ConfigurationException, ObjectMapException, TableNameException, Exception;
-	public <T> LinkedHashSet<T> Read(String query, Class<T> clazz) throws SQLException, ConfigurationException, Exception;
+	public <T> int create(T object) throws SQLException, ConfigurationException, ObjectMapException, TableNameException, Exception;
+	public <T> void update(T object) throws SQLException, ConfigurationException, ObjectMapException, TableNameException, Exception;
+	public <T> void delete(T object) throws SQLException, ConfigurationException, ObjectMapException, TableNameException, Exception;
+	public <T> LinkedHashSet<T> read(Class<T> clazz, String query, Object...args) throws SQLException, ConfigurationException, Exception;
 }
